@@ -85,7 +85,7 @@
     
     <!-- 版本信息 -->
     <view class="version-info">
-      <text class="version-text">FitLife v1.0.0</text>
+      <text class="version-text">SFC v1.0.0</text>
     </view>
   </view>
 </template>

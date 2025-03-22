@@ -7,8 +7,8 @@
           <text class="avatar-placeholder">用户</text>
         </view>
         <view class="user-details">
-          <text class="username">健身达人</text>
-          <text class="user-level">初级会员</text>
+          <text class="username">健身哥</text>
+          <text class="user-level">Level 1</text>
         </view>
       </view>
       <view class="settings-icon" @click="goToSettings">
@@ -59,17 +59,17 @@
     
     <!-- 底部导航栏 -->
     <view class="tab-bar">
+      <view class="tab-item" @click="goToDiscover">
+        <text class="tab-icon">⚪</text>
+        <text class="tab-text">发现</text>
+      </view>
       <view class="tab-item active">
-        <text class="tab-icon">●</text>
-        <text class="tab-text">首页</text>
+        <text class="tab-icon">⚪</text>
+        <text class="tab-text">开始</text>
       </view>
       <view class="tab-item" @click="goToStats">
-        <text class="tab-icon">◆</text>
+        <text class="tab-icon">⚪</text>
         <text class="tab-text">统计</text>
-      </view>
-      <view class="tab-item" @click="goToProfile">
-        <text class="tab-icon">◇</text>
-        <text class="tab-text">我的</text>
       </view>
     </view>
   </view>
@@ -106,14 +106,18 @@ export default {
       });
     },
     goToStats() {
-      uni.showToast({
-        title: '统计功能开发中',
-        icon: 'none'
+      uni.redirectTo({
+        url: '/pages/stats/stats'
       });
     },
     goToProfile() {
       uni.navigateTo({
         url: '/pages/profile/profile'
+      });
+    },
+    goToDiscover() {
+      uni.redirectTo({
+        url: '/pages/discover/discover'
       });
     }
   }
@@ -197,18 +201,21 @@ export default {
 /* 欢迎区域样式 */
 .welcome-section {
   margin-bottom: 50rpx;
+  display: flex;
+  flex-direction: column;
 }
 
 .welcome-text {
   font-size: 44rpx;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 10rpx;
+  margin-bottom: 16rpx;
 }
 
 .welcome-subtext {
   font-size: 28rpx;
   color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
 }
 
 /* 运动选择区域样式 */
@@ -270,9 +277,10 @@ export default {
 }
 
 .tab-icon {
-  font-size: 40rpx;
+  font-size: 44rpx;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 6rpx;
+  margin-bottom: 8rpx;
+  transition: color 0.3s ease;
 }
 
 .tab-text {

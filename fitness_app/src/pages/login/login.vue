@@ -2,7 +2,7 @@
   <view class="login-container">
     <view class="logo-container">
       <image class="logo" src="/static/fitness_icon.png"></image>
-      <text class="app-name">FitLife</text>
+      <text class="app-name">Smart Fitness Coach</text>
     </view>
     
     <view class="form-container">

@@ -87,6 +87,8 @@ export default {
 
 .exercise-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .exercise-name {

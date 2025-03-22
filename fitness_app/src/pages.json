@@ -8,6 +8,13 @@
 			}
 		},
 		{
+			"path": "pages/discover/discover",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "SFC智能健身"
@@ -51,6 +58,13 @@
 			"path": "pages/exercise/exercise",
 			"style": {
 				"navigationBarTitleText": "运动计数",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/stats/stats",
+			"style": {
+				"navigationBarTitleText": "统计",
 				"navigationStyle": "custom"
 			}
 		}
